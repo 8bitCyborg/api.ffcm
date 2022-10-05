@@ -24,4 +24,9 @@ class PostsController extends Controller
             return Posts::UpdateorCreate($request->all());
         };
     }
+
+    public function destroy($id)
+    {
+        return Posts::destroy($id);
+    }
 }

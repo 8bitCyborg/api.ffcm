@@ -20,6 +20,7 @@ use App\Http\Controllers\PostsController;
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/addPost', [PostsController::class, 'store']);
 Route::get('/getPosts', [PostsController::class, 'index']);
+Route::delete('/deletePost/{id}', [PostsController::class, 'destroy']);
 
 //Protected Routes;
 Route::group(['middleware' => ['auth:sanctum']], function () {
