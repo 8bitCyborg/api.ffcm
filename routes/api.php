@@ -25,6 +25,7 @@ Route::delete('/deletePost/{id}', [PostsController::class, 'destroy']);
 
 Route::post('/leaders/addLeader', [LeadersController::class, 'store']);
 Route::get('/leaders/getLeaders', [LeadersController::class, 'index']);
+Route::delete('/leaders/delete/{id}', [LeadersController::class, 'destroy']);
 
 //Protected Routes;
 Route::group(['middleware' => ['auth:sanctum']], function () {

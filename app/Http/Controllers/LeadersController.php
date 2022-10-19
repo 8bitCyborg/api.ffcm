@@ -25,4 +25,9 @@ class LeadersController extends Controller
             return Leader::UpdateorCreate($request->all());
         }
     }
+
+    public function destroy($id)
+    {
+        return Leader::destroy(($id));
+    }
 }
